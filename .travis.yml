@@ -1,4 +1,3 @@
-dist: bionic
 language: c
 os:
   - linux
@@ -16,6 +15,7 @@ script:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update .travis.yml
 =======
@@ -27,3 +27,5 @@ script:
 >>>>>>> edit travis
 =======
 >>>>>>> edit travis
+======
+>>>>>>> add ci
