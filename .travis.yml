@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dist: bionic
 language: c
 os:
@@ -34,3 +35,13 @@ script:
 >>>>>>> edit travis
 =======
 >>>>>>> edit travis
+=======
+language: c
+os:
+  - linux
+
+branches:
+  only:
+    - IZ-1
+    - main
+>>>>>>> travis
