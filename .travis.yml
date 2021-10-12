@@ -16,6 +16,7 @@ script:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update .travis.yml
 =======
@@ -29,3 +30,9 @@ script:
 >>>>>>> edit travis
 ======
 >>>>>>> add ci
+=======
+=======
+  - cmake CMakeLists.txt
+  - cmake --build .
+>>>>>>> Update .travis.yml
+>>>>>>> Update .travis.yml
