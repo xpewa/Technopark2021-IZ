@@ -12,5 +12,10 @@ install:
   - sudo cp *.a /usr/lib
   - cd -
 script:
-  - sudo cmake CMakeLists.txt
-  - sudo make
+<<<<<<< HEAD
+=======
+  - cmake CMakeLists.txt
+  - cmake --build .
+>>>>>>> Update .travis.yml
+  after_success:
+  - bash <(curl -s https://codecov.io/bash)
