@@ -1,8 +1,20 @@
 language: c
 os:
   - linux
-
-branches:
-  only:
-    - IZ-1
-    - main
+compiler:
+  - gcc
+install:
+  - sudo apt-get install cmake
+  - sudo apt-get install libgtest-dev
+  - cd /usr/src/gtest
+  - sudo cmake CMakeLists.txt
+  - sudo make
+  - sudo cp *.a /usr/lib
+  - cd -
+script:
+  - mkrdir build
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION -DTARGET_CPU=$TARGET_CPU
+  - cmake ..build
+  after_success:
+  - bash <(curl -s https://codecov.io/bash)
