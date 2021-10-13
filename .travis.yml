@@ -1,17 +1,7 @@
-language: c
-os:
-  - linux
-compiler:
-  - gcc
-install:
-  - sudo apt-get install cmake
-  - sudo apt-get install libgtest-dev
-  - cd /usr/src/gtest
-  - sudo cmake CMakeLists.txt
-  - sudo make
-  - sudo cp *.a /usr/lib
-  - cd -
+dist: bionic
+language: cpp
 script:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,7 +22,14 @@ script:
 >>>>>>> add ci
 =======
 =======
+>>>>>>> simple travis
+=======
   - cmake CMakeLists.txt
   - cmake --build .
 >>>>>>> Update .travis.yml
+<<<<<<< HEAD
 >>>>>>> Update .travis.yml
+=======
+=======
+>>>>>>> simple travis
+>>>>>>> simple travis
