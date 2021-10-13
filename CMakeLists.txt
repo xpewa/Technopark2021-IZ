@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.12)
-
 project(IZ-1)
 
 add_library(books STATIC books.c)
