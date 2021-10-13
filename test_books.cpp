@@ -42,6 +42,28 @@ TEST(test_book, assert_3){
     EXPECT_EQ(books[2].ISBN[0], '3');
 }
 
+TEST(test_book, validate_book){
+    t_book* book = (t_book*) calloc(1, sizeof(t_book));
+    strcpy(book->ISBN, "111-1-111111-11-1");
+    book->count = 100;
+    book->count_readers = 0;
+    book->readers = NULL;
+    book->next = NULL;
+
+    int res = validate_book(book);
+    EXPECT_EQ(res, SUCCESS);
+}
+
+TEST(test_book, validate_reader){
+    t_reader* reader = (t_reader*) calloc(1, sizeof(t_reader));
+    reader->date[0] = 25;
+    reader->date[1] = 12;
+    reader->date[2] = 2021;
+
+    int res = validate_reader(reader);
+    EXPECT_EQ(res, SUCCESS);
+}
+
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);

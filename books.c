@@ -68,9 +68,7 @@ int static scan_reader(t_reader* reader) {
 int static continue_scan() {
     char c = " ";
     printf("Do you want to add else one book? Enter y or n.\n");
-    while (c != 'y' && c != 'n') {
-        scanf("%c", &c);
-    }
+    while (scanf("%c", &c) != 1 || c != 'y' && c != 'n');
     if (c == 'y')
         return SUCCESS;
     else
@@ -101,28 +99,26 @@ int static validate_isbn(const char* isbn) {
     return SUCCESS;
 }
 
-int static validate_book(t_book* book) {
+int validate_book(t_book* book) {
     if (validate_isbn(book->ISBN) == ERROR || book->count_readers < 0 || book->count < 0)
         return ERROR;
     return SUCCESS;
 }
 
-int static validate_reader(t_reader* reader) {
-    if (reader->date[0] < 0 || reader->date[0] > 31)
+int validate_reader(t_reader* reader) {
+    if (reader->date[0] < 1 || reader->date[0] > 31)
         return ERROR;
-    if (reader->date[1] < 0 || reader->date[1] > 12)
-        return ERROR;
-    if (reader->date[2] < 2000)
+    if (reader->date[1] < 1 || reader->date[1] > 12)
         return ERROR;
     return SUCCESS;
 }
 
 int scan_books(t_library* library) {
-    t_book* book = (t_book*)calloc(1, sizeof(t_book));
-    if (book == NULL) {
-        return ERROR_MEMORY;
-    }
     while (continue_scan() == SUCCESS) {
+        t_book* book = (t_book*)calloc(1, sizeof(t_book));
+        if (book == NULL) {
+            return ERROR_MEMORY;
+        }
         printf("ISBN: XXX-X-XXXXXX-XX-X "
                "Title\n"
                "Year of publishing\n"

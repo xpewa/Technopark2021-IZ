@@ -35,5 +35,8 @@ t_library* create_library();
 void push_book(t_library* library, t_book* book);
 int scan_books(t_library* library);
 
+int validate_book(t_book* book);
+int validate_reader(t_reader* reader);
+
 void pop_book(t_library* library);
 void free_library(t_library* library);
