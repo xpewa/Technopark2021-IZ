@@ -68,9 +68,8 @@ int static scan_reader(t_reader* reader) {
 int static continue_scan() {
     char c = " ";
     printf("Do you want to add else one book? Enter y or n.\n");
-    c = getchar();
     while (c != 'y' && c != 'n') {
-        c = getchar();
+        scanf("%c", &c);
     }
     if (c == 'y')
         return SUCCESS;
