@@ -3,11 +3,12 @@ language: cpp
 script:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-  - cmake CMakeLists.txt
-  - cmake --build .
 >>>>>>> Update .travis.yml
-  after_success:
-  - bash <(curl -s https://codecov.io/bash)
 =======
 >>>>>>> simple travis
+=======
+  - cmake CMakeLists.txt
+  - make
+>>>>>>> edit travis
