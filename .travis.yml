@@ -1,4 +1,5 @@
 dist: bionic
 language: cpp
 script:
-  - echo 123
+  - cmake CMakeLists.txt
+  - make
