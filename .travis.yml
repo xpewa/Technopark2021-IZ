@@ -7,13 +7,12 @@ script:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update .travis.yml
 =======
 >>>>>>> simple travis
 =======
-  - cmake CMakeLists.txt
-  - make
 <<<<<<< HEAD
 >>>>>>> edit travis
 =======
@@ -24,12 +23,19 @@ script:
 =======
 >>>>>>> simple travis
 =======
-  - cmake CMakeLists.txt
-  - cmake --build .
+>>>>>>> edit travis
+=======
 >>>>>>> Update .travis.yml
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Update .travis.yml
 =======
+>>>>>>> edit travis
+=======
 =======
 >>>>>>> simple travis
 >>>>>>> simple travis
+=======
+  - cmake CMakeLists.txt
+  - make
+>>>>>>> edit travis
