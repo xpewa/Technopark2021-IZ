@@ -1,41 +1,21 @@
 dist: bionic
-language: cpp
+language: c
+os:
+  - linux
+compiler:
+  - gcc
+install:
+  - sudo apt-get install cmake
+  - sudo apt-get install libgtest-dev
+  - cd /usr/src/gtest
+  - sudo cmake CMakeLists.txt
+  - sudo make
+  - sudo cp *.a /usr/lib
+  - cd -
+  - sudo apt install clang-format
+  - sudo apt install clang-tidy
+  - sudo apt install cppcheck
+  - sudo apt install valgrind
 script:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Update .travis.yml
-=======
->>>>>>> simple travis
-=======
-<<<<<<< HEAD
->>>>>>> edit travis
-=======
->>>>>>> edit travis
-======
->>>>>>> add ci
-=======
-=======
->>>>>>> simple travis
-=======
->>>>>>> edit travis
-=======
->>>>>>> Update .travis.yml
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Update .travis.yml
-=======
->>>>>>> edit travis
-=======
-=======
->>>>>>> simple travis
->>>>>>> simple travis
-=======
   - cmake CMakeLists.txt
   - make
->>>>>>> edit travis
