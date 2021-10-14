@@ -12,6 +12,10 @@ install:
   - sudo make
   - sudo cp *.a /usr/lib
   - cd -
+  - sudo apt install clang-format
+  - sudo apt install clang-tidy
+  - sudo apt install cppcheck
+  - sudo apt install valgrind
 script:
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +28,9 @@ script:
   - cmake CMakeLists.txt
   - make
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> edit travis
+=======
 >>>>>>> edit travis
 =======
 >>>>>>> edit travis
