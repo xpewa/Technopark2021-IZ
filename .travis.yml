@@ -4,6 +4,7 @@ os:
   - linux
 compiler:
   - gcc
+
 install:
   - sudo apt-get install cmake
   - sudo apt-get install libgtest-dev
